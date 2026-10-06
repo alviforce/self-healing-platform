@@ -1,0 +1,33 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# --- Secrets and local config (never commit) ---
+.env
+*.env
+!.env.example
+kubeconfig
+*.kubeconfig
+
+# --- OpenTofu / Terraform ---
+# State holds real resource IDs and often secrets; tfvars hold server addresses.
+# The provider lock file (.terraform.lock.hcl) SHOULD be committed.
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+
+# --- Local data ---
+*.db
+*.sqlite
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
